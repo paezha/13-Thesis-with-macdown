@@ -1,0 +1,149 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# WORKSHOP: Writing a McMaster Graduate Thesis using markdown, R, and package {macdown}
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This workshop is intended for students who plan to write a graduate
+thesis at McMaster University. In it, I will introduce the use of
+markdown and R, along with package
+[{macdown}](https://paezha.github.io/macdown/), to create a reproducible
+document that is moreover beautifully typeset in McMaster’s graduate
+thesis style.
+
+Markdown has some appealing features for writing a thesis:
+
+- It is a simple way to write in a plain-text editor with few formatting
+  options to distract from the process of writing.
+- It gives more control over the aspect of the final document.
+- It can be used as a source to create documents in a variety of
+  formats, including HTML, Word, or, as is the case, a PDF document in
+  the style of a McMaster thesis.
+
+Combined with the statistical computing language R, markdown becomes a
+powerful tool to create reproducible research documents.
+
+The job of {macdown} is to convert the source documents in R markdown
+into a PDF file that can be submitted to the School of Graduate Studies.
+
+The workshop will be in person (no online option), and will take place
+in two sessions, in the mornings of April 14 and April 21, 2023.
+
+- The first session will concentrate on the basics:
+  - Installing the software.
+  - Creating a project and initializing a thesis.
+  - The parts of a thesis in {macdown}.
+  - Writing in markdown.
+  - R markdown.
+  - Embedding figures and tables.
+  - Producing a minimal document.
+- The focus of the second session will be on:
+  - Managing bibliographies.
+  - Using embedded code for data analysis and presentation of results.
+  - Chunk options.
+  - Practice.
+
+I plan to keep this workshop to at most 10 participants and reserve the
+right to cancel it if interest is low.
+
+To register for this workshop please contact me at <paezha@mcmaster.ca>
+by **March 31st, 2023**, at the latest.
+
+(**NOTE:** The next offering of the workshop will likely be in the Fall
+of 2023; contact me if you are interested.)
+
+## Prerequisites
+
+- Being registered as a graduate student at McMaster.
+
+Do I need to know R for this workshop?
+
+- No. In fact, your thesis does not need any statistical or computing
+  components at all for you to benefit from the workshop.
+- Some familiarity with R would be an asset, but is not essential. I
+  will provide some pre-workshop instructions to install the software to
+  be used in the workshop.
+
+## Pre-workshop tasks
+
+1.  Install the latest version of R. If you already have R make sure
+    that you are running the latest version. See:
+
+<https://www.r-project.org/>
+
+2.  Install R Studio. If you already have it, make sure it is the latest
+    version.
+
+<https://support--rstudio-com.netlify.app/products/rstudio/download/>
+
+3.  Install [{macdown}](https://paezha.github.io/macdown/),
+    [{thesisdown}](https://github.com/ismayc/thesisdown),
+    [{bookdown}](https://bookdown.org/), and
+    [{tinytex}](https://yihui.org/tinytex/). To do this, run the
+    following commands from the console:
+
+``` r
+install.packages("remotes")
+install.packages("bookdown")
+install.packages("tinytex")
+remotes::install_github("ismayc/thesisdown")
+remotes::install_github("paezha/macdown")
+```
+
+4.  Check that these essential packages are installed in your system.
+    You can do this from the console:
+
+``` r
+system.file(package='rmarkdown')
+system.file(package='knitr')
+system.file(package='bookdown')
+system.file(package='thesisdown')
+system.file(package='macdown')
+system.file(package='tinytex')
+```
+
+When a package is installed it will return a message like so:
+
+``` r
+system.file(package='thesisdown')
+[1] "C:/Users/paezha/AppData/Local/R/win-library/4.2/thesisdown"
+```
+
+If the package is not installed, the message will be like so:
+
+``` r
+system.file(package='packageX')
+[1] ""
+```
+
+5.  If you need to, install the packages from the console of R Studio in
+    this way:
+
+``` r
+install.packages("rmarkdown")
+install.packages("knitr")
+```
+
+6.  Check whether tinytex is deployed. In the console of R Studio enter
+    the following:
+
+``` r
+tinytex:::is_tinytex()
+```
+
+7.  If the response is FALSE, then run:
+
+``` r
+tinytex::install_tinytex()
+```
+
+8.  These are other packages that you will probably find useful:
+
+- [{glue}](https://glue.tidyverse.org/)
+- [{here}](https://here.r-lib.org/)
+- [{kable}](https://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
+- [{tidyverse}](https://www.tidyverse.org/)
+
+## Examples of theses written using {macdown}

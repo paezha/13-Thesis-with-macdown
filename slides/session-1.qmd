@@ -1,0 +1,43 @@
+---
+title: "Writing a McMaster Thesis with R markdown and {macdown}"
+author: "Antonio Paez"
+format: 
+  revealjs:
+    logo: mcm-sci-sees_left-col_png.png
+    css: logo.css
+---
+
+# Session 1
+
+## Installing the software
+
+- Packages in `R`: units of shareable code
+
+## Creating a project and initializing a thesis
+
+- Projects
+- Templates
+- Structure of thesis directory
+
+## The parts of a thesis in {macdown}
+
+- YAML and metadata
+- Index file
+- Files for the thesis
+
+## Writing in markdown
+
+- Basic markdown
+- Formatting
+
+## R markdown
+
+- What is R markdown?
+
+## Embedding figures and tables
+
+- Basics of tables and figures
+
+## Producing a minimal document
+
+- Knitting
